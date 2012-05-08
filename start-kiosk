@@ -1,0 +1,6 @@
+#!/bin/bash
+while true;
+    do   
+        cd /opt/kiosk/
+        python /opt/kiosk/browser.py >> /opt/kiosk/log && echo "[$(date)] Rachel crashed" >> /opt/rachel/log 
+    done
