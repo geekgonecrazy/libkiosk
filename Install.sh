@@ -36,6 +36,7 @@ chmod +x xsession
 mv xsession /home/$USER/.xsession
 ln -s /home/$USER/.xsession /home/$USER/.xinitrc
 chown -R  $USER.users /home/$USER/
+mv dmrc /home/$USER/.dmrc
 touch log
 chmod 777 log
 mv kiosk.desktop /usr/share/xsessions/
