@@ -36,7 +36,7 @@ class XScreenSaverInfo( ctypes.Structure):
 class browser():
 
 	def __init__(self):
-		self.serverip=""
+		self.serverip="10.10.10.27"
 		self.serveraddress="http://" + self.serverip
 		date = datetime.datetime.now()
 		print "[Kiosk Started] - " + date.strftime("%B %d, %Y at %H:%M")
@@ -48,7 +48,7 @@ class browser():
 		self.ScrolledWindow.add(self.view)		
 
 		self.window = gtk.Window(gtk.WINDOW_TOPLEVEL)
-		#self.window.fullscreen()
+		self.window.fullscreen()
 		
 		self.home_image = gtk.Image()
 		self.home_image.set_from_file("icons/Home.png")
