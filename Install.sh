@@ -38,9 +38,9 @@ ln -s /home/$USER/.xsession /home/$USER/.xinitrc
 chown -R  $USER.users /home/$USER/
 touch log
 chmod 777 log
-mv $USER.desktop /usr/share/xsessions/
+mv kiosk.desktop /usr/share/xsessions/
 
 read -p "Please enter the address of the website this will be used Ex: [10.10.10.27]"
-echo $REPLY >> $USER.config
-chmod 755 $USER.config
-chown $USER.users $USER.config
+echo $REPLY >> kiosk.config
+chmod 755 kiosk.config
+chown $USER.users kiosk.config
