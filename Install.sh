@@ -32,6 +32,7 @@ echo "TimedLoginEnable=true" >> /etc/gdm/custom.conf
 echo "TimedLogin=$USER" >> /etc/gdm/custom.conf
 echo "TimedLoginDelay=0" >> /etc/gdm/custom.conf
 
+chmod +x xsession
 mv xsession /home/$USER/.xsession
 ln -s /home/$USER/.xsession /home/$USER/.xinitrc
 chown -R  $USER.users /home/$USER/
