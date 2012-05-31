@@ -19,7 +19,7 @@ import threading
 import gobject
 import sys
 import socket
-from OpenSSL import SSL
+#from OpenSSL import SSL
 from subprocess import call
 
 class XScreenSaverInfo( ctypes.Structure):
