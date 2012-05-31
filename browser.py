@@ -36,7 +36,7 @@ class XScreenSaverInfo( ctypes.Structure):
 class browser():
 
 	def __init__(self):
-		self.serverip=""
+		self.serverip="10.10.10.27"
 		self.serveraddress="http://" + self.serverip
 		date = datetime.datetime.now()
 		print "[Kiosk Started] - " + date.strftime("%B %d, %Y at %H:%M")
@@ -147,31 +147,23 @@ class browser():
 		return -1
 
 	def isallowed(self,site):
-		domain=""
-		basedomain=""
+		domain = ''
 		try:	
-			if site.split('/')[2] == self.serverip:
-				domain = self.serverip
-			else:			
-				domain = site.split('/')[2]	
-				basedomain = domain.split('.')
-				if len(basedomain) > 2:
-					basedomain = "*." + string.join(basedomain[len(basedomain)-(len(basedomain)-1):], '.')
-				else:
-					basedomain = '*.' + domain
-				
+			domain = site.split('/')[2]
 		except IndexError:
-			self.nullfunction()	
+			self.nullfunction()
+		else:
+			if site.split('/')[2] == -1:
+				domain = self.server
 		finally:
-			if basedomain in self.whitelist:
-				return 1
-			elif domain in self.whitelist:
-				return 1	
-			elif domain == self.serverip:
-				self.homepage = True				
-				return 1
-			else:
+			if domain not in self.whitelist:
 				return self.deny()
+			else:
+				if domain == self.serverip:
+					self.homepage = True
+				else:
+					self.homepage = False
+				return 1
 
 	def destroy(self,widget, data=None):
 		gtk.main_quit()
