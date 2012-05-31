@@ -2,7 +2,7 @@
 
 ###############################################
 # Created by:  Aaron Ogle                     #
-# Date: 08/20/2011                            #
+# Date: 05/05/2012                            #
 #                                             #
 #Project: libkiosk                            #
 #                                             #
@@ -48,7 +48,7 @@ class browser():
 		self.ScrolledWindow.add(self.view)		
 
 		self.window = gtk.Window(gtk.WINDOW_TOPLEVEL)
-		#self.window.fullscreen()
+		self.window.fullscreen()
 		
 		self.home_image = gtk.Image()
 		self.home_image.set_from_file("icons/Home.png")
