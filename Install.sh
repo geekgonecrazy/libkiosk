@@ -1,5 +1,4 @@
 #!/bin/bash
-
 USER=kioskuser
 PASS=KioskPassword359
 
