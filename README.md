@@ -8,7 +8,7 @@ Kiosk Software that was designed to display a catalog for libraries
 
 Run the following commands:
 ```Bash
-sudo apt-get install -y git expect
+sudo apt-get install -y git
 
 git clone git://github.com/aaronogle/libkiosk.git
 cd libkiosk
