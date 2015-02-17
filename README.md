@@ -10,7 +10,7 @@ Run the following commands:
 ```Bash
 sudo apt-get install -y git
 
-git clone git://github.com/aaronogle/libkiosk.git
+git clone git://github.com/geekgonecrazy/libkiosk.git
 cd libkiosk
 sudo ./Install.sh
 ```
